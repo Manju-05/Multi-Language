@@ -1,0 +1,1 @@
+Hey this is the another file..!Hey this is the additional content that is added to the file2.txt by using append mode..

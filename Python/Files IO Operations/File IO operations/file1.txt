@@ -1,0 +1,2 @@
+This is the content that is written through the write method..
+This is the content that is append through the append method to the file.
