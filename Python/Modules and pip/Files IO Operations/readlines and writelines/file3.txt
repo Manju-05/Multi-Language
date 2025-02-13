@@ -1,0 +1,8 @@
+This is file3 used for readlines() and writelines()
+This is file3 used for readlines() and writelines()
+This is file3 used for readlines() and writelines()
+This is file3 used for readlines() and writelines()
+This is file3 used for readlines() and writelines()
+This is file3 used for readlines() and writelines()
+This is file3 used for readlines() and writelines()
+
