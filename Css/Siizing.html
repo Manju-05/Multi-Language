@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sizing units | css</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 1358px; */
+            width: 80vw;  /*IT OCCUPIES 80% of the width of the webiste*/
+            height: 5vh;
+            margin: auto;
+            background-color: aquamarine;
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 1358px; */
+            width: 80vw;
+            /* height: 80vh; *//*IT OCCUPIES 80% of the height of the webiste*/
+            min-height: 80vh;
+            margin: 23px auto;
+            font-size: 18px;
+            background-color: aquamarine;
+        }
+
+        .container>div {
+            font-size: 2em;
+            border: 2px solid red;
+            width: 50%;
+        }
+
+        .container>div>div {
+            border: 2px solid blue;
+            width: 50%;
+        }
+
+        .mycont {
+            border: 2px solid black;
+            box-sizing: border-box;
+            margin: 23px auto;
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+            /* width: 100vmin; */
+            width: 80vw;
+        }
+
+
+
+        h1 {
+            border: 2px solid red;
+            width: 400px;
+            background-color: yellow;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-sizing: border-box;
+            margin: auto;
+            text-transform: capitalize;
+        }
+
+        .explaination {
+            font-size: larger;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units -->
+    <div class="box">
+        This is a NAVBAR
+    </div>
+
+    <div class="container">
+        <div>
+            Lorem ipsum, dolor sit amet quo adipisci libero quam laboriosam nihil voluptate natus nobis earum ad?
+
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. odio fugit, totam voluptatem saepe!
+            </div>
+        </div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam aut ea repudiandae illum itaque quas ipsam!
+        Officia ab saepe porro nostrum facilis corrupti doloribus sunt labore maiores n
+    </div>
+    <div class="mycont">
+THIS IS  THE FOOTER  </div>
+
+    <h1>Different types of units</h1>
+    <div class="explaination">
+        <ol>
+            <li>pixel (px)=equalent to ur size of PC / moniter(1358px)</li>
+            <li>vh = percentage of the viewport i.e the percantage of the website</li>
+            <li>em= doubles the size of the existing size i.e <strong>doubles</strong> the size of parent | note:teh
+                default size of the font is 16px.If u give 2 em then the size is 32px.</li>
+            <li>rem=doubles the size of the Root Tag(HTML) size i.e <strong>doubles</strong> the size of Root | note:teh
+                default size of the font is 16px.If u give 2 rem then the size is 32px.</li>
+            <hr>
+            <li>vmin & vmax</li>
+            <li>vw (viewwidth) & vh (viewheigth) <strong>NOTE: tihs is the one of the most important sizing that is used to giev all the header main and footer in equal sizes. The above content is created by using vw &vh.</strong></li>
+            <li>percantage units(%)=percantage of the parent size note:Whenever we use teh percentage we have to use
+                shouls already need the parent tag size had set.</li>
+        </ol>
+    </div>
+
+</body>
+
+</html>

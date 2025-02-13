@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css specificity and cascade</title>
+    <style>
+        /* THE SPECIFICITY OF THE H1 ATTRIBUTE IS 10 */
+        h1 {
+            color: red;
+            ;
+        }
+        /* THE SPECIFICITY OF THE CLASS ATTRIBUTE IS 10
+        THEREFORE HERE THE SPECIFITY OF THE 3 CLASSES IS SAME i.e 10 SO THE LAST ATTRIBUTE STYLE WILL BE APPLIED */
+
+        .blue {
+            color: blue;
+        }
+        /* THE SPECIFICITY OF THE CLASS ATTRIBUTE IS 10 */
+
+        .yellow {
+            color: yellow;
+        }
+        /* THE SPECIFICITY OF THE CLASS ATTRIBUTE IS 10 */
+
+        .cbrown {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="blue yellow cbrown">CSS Specificity helps determine what style will be applied to the HTML element(s)
+            when there are overlapping or multiple CSS rules</h1>
+        <h1 class="blue">So, the order of specificity is:<br>
+            Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector</h1>
+        <h2>The !important flag in CSS is used to give a particular style rule the highest level of importance,overriding any other competing styles.It will Also overriding inline css. </h2>
+        <pre>
+            <h2 style="font-style: italic;">
+To calculate specificity, assign a value to each part of the selector:
+
+Universal Selector: 0
+Element selectors and pseudo-elements: 1
+Class selectors, attribute selectors, and pseudo-classes: 10
+ID selectors: 100
+Inline styles: 1000
+            </h2>
+            
+        </pre>
+
+    </div>
+
+</body>
+</html>

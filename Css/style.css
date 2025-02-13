@@ -1,0 +1,12 @@
+/* Hey this is EXTERNAL file for css to add styles in the index.html */
+#example{
+    background-color: red;
+    color: yellow;
+    display: inline;
+}
+#red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}

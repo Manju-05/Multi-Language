@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS fonts | color properties</title>
+    <style>
+        /* IF WE WAMT EXTRA FONTS WE CAN ADD IT FROM GOOGLE FONTS AND SEACRH A FONT AND ADD THAT IMPORT LINK IN THE STYLE TAG | IF U WANT TO USE LINKS THEN COPY THE LINK AND ADD IT OUTISEDE OF THE STYLE TAG  */
+        h1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-style: italic;
+            font-size: 50px;
+            font-weight: bolder;
+            color: rgb(12, 231, 235);
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-decoration-thickness: 7px;
+            text-decoration-color: rgb(215, 182, 100);
+            text-transform: capitalize;
+
+        }
+
+        p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 600px;
+            font-style: oblique;
+            font-size: large;
+            line-height: 40px;
+            letter-spacing: 3px;
+        }
+
+        #lorem {
+            text-transform: uppercase;
+            text-indent: 200px;
+        }
+
+        #hii {
+            width: 200px;
+            height: 200px;
+            border: 2px solid pink;
+            text-overflow: ellipsis;
+            overflow: scroll;
+            text-transform: capitalize;
+        }
+
+        #myid {
+            border: 2px solid red;
+            width: 75px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+
+        }
+
+        /* COLOR PORPOERTIES */
+        h3 {
+            color: rgba(225, 29, 29, 0.851);
+            /* 
+            color:red;                  By UISNG COLOR NAME
+            color:#ff0000;              BY USING COLOR CODE
+            color:rgb(255, 0, 0);       BY USING RGB  VALUES
+            color:rgba(80, 90, 200, 1); BY USING RGBA VALUES
+            color:hsl(255,037,255);     BY USING HSL VALUES
+            color:hsla(32,43,22,0.4)    BY USING HSLA VALUES
+             */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>about fonts</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit sint nobis labore ea culpa cum neque
+            repudiandae! Odio quaerat deleniti quasi rerum aspernatur!</p>
+    </div>
+    <div id=lorem>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt dolor laborum ex libero, enim corporis
+            fugit doloribus, aperiam a vel sit. Nostrum, qui. Sunt autem natus libero minus, sit suscipit Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Autem velit, delectus iste natus placeat nobis optio
+            doloremque eius earum beatae officiis id. Harum odio neque facere. Sunt, expedita ipsam accusantium placeat
+            asperiores at quo perspiciatis alias officia, sed adipisci odit maxime? Facilis, explicabo!</p>
+    </div>
+    <div id=hii>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt dolor laborum ex libero, enim corporis
+            fugit doloribus, aperiam a vel sit. Nostrum, qui. Sunt autem natus libero minus, sit suscipit Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Autem velit, delectus iste natus placeat nobis optio
+            doloremque eius earum beatae officiis id. Harum odio neque facere. Sunt, expedita ipsam accusantium placeat
+            asperiores at quo perspiciatis alias officia, sed adipisci odit maxime? Facilis, explicabo!</p>
+    </div>
+    <div id=myid>
+        <p>Lorem ipsum dolor sit, amet consectetur !</p>
+    </div>
+    <div>
+        <h2>COLOR PROPERTIES</h2>
+        <h3>THERE ARE THREE WAYS TO ADD COLORS TO THE HTML</h3>
+        <ol>
+            <li>color keyword</li>
+            <li>hex colors</li>
+            <li>RGB</li>
+            <li>RGBA</li>
+            <li>HSL</li>
+
+    </div>
+
+    </ol>
+</body>
+</html>

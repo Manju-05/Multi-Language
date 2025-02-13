@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css | Display properties</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            border: 2px solid red;
+            font-size: larger;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 700;
+            font-style: italic;
+            text-decoration: solid;
+            text-align: center;
+            text-transform: capitalize;
+            text-overflow: ellipsis;
+            background-color: whitesmoke;
+            display: inline-block;
+        }
+
+        span {
+            border: 3px solid rgb(0, 84, 253);
+            background-color: aqua;
+            font-size: larger;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 700;
+            font-style: italic;
+            text-decoration: solid;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .robo {
+            display:inline;
+            color: blue;
+            background-color: red;
+            /* display: none;
+            visibility: hidden; */
+            
+        }
+
+        /* MAIN CSS OF BPXES TO EXPLAIN TEH FLEX PROPERTIES */
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            border: 2px solid maroon;
+            background-color: red;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            border: 2px solid maroon;
+            background-color: whitesmoke
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            border: 2px solid maroon;
+            background-color: green;
+        }
+        .container{
+            height: 50vh;
+            border: 2px solid green;
+            display: flex;
+            /* flex-direction: column;
+            flex-direction: row; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+            justify-content: center;
+            /* justify-content: space-between; */
+            justify-content: space-around;
+            align-items: center;
+            /* gap: 20px; */
+            flex-wrap: wrap;
+            
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        Hey I am div I Will occupies complete width of the website..
+    </div>
+    <span>
+        Hey I am SPAN I Will occupies limited width of the website..
+    </span>
+
+    <div class="robo">
+            hey iam DIV.
+            We can change the propeortie of the div from thr block to the inline by using css .This is the div and this propeortie is the inline 
+            HEY iam anotehr para 
+    </div>
+    <pre>
+        <h2>display properties are:</h2>
+        <h3>inline</h3>
+        <h3>block</h3>
+        <h3>flex</h3>
+        <!-- <h3>inline-block</h3> -->
+        <!-- <h3>flexbox</h3>
+        <h3>grid</h3>
+        <h3>justify-content  | center</h3> -->
+ <HR></HR>   <!--TO GIVE A HORIZONTAL LINE  -->
+        <h1>FLEX----->PARENT (MAIN/PARENT DIV) CONTAINER AND ALL THE CHILD DIV'S SHUOLD BE INSIDE THE PARENT (MAIN/PARENT DIV) CONTAINER</h1>
+        <H1>ITEMS : FLEX ITEMS</H1>
+        <H1>FLEX-DIRECTION : ROW COLUMN ROW-REVERSE COLLUMN-REVERSE </H1>
+        <H1>FLEX-WRAP:WRAP = TO VISIBLE THE ITEMS IN ANY SIZE OF THE WINDOW OR THE MOBILE PHONE WHUTHOUT ANY DISTRACTION i.e IS TEH USER RESIZES THE WINDOW THE ISTE SHOULD BE APPEAER IN A GOOD MANNER</H1>
+        <H1>GAP : TO GIVE GAP/ SPACE BETWEEN THE CONTENTS / DIVS</H1>
+        <H1>JUSTIFY-CONTENT : CENTER END START SPACE-AROUND SPACE BETWEEN </H1>
+    </pre>
+
+    <!-- MAIN EXPLAINATION OF DISPLAY PROPERTIES  | FLEX -->
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+
+</body>
+
+</html>

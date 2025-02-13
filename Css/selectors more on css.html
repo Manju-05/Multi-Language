@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors more on css</title>
+    <style>
+        .boxes{
+            border: 2px solid red;  
+            padding: 20px;
+        }
+        .box:first-child{
+            background-color: rgb(200, 228, 228);
+        }
+        .box::first-line{
+            color: red;
+        }
+
+        .box:nth-child(even){
+            background-color: red;
+            color: whitesmoke;
+        }
+
+
+        [data-color=primary]{
+            border: 2px solid green;
+            padding: 30px;
+        }
+
+        .boxes::before{
+            content: "this is the content that is inserted throught the css dynamically by using the selector BEFORE";
+            color:green
+        }
+        .boxes::after{
+            content: "this is the content that is inserted throught the css dynamically by using the selector AFTER";
+            color: maroon;
+        }
+        .box:nth-child(5){
+            background-color: palegoldenrod;
+        }
+        ::selection{
+            background-color: black;
+            color: yellow;
+        }
+        .box::first-letter{
+            color: hotpink;
+            font-size: 30px;
+
+        }
+        input::placeholder{
+            color:rgb(33, 33, 33);
+            font-size: medium;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="boxes">
+    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis saepe laborum esse maiores quidem. Neque corporis modi assumenda impedit molestias exercitationem ipsum, sit accusamus iste, totam et temporibus quod officia beatae? Eos perferendis voluptates, odit similique doloremque suscipit nemo, dolorem, animi quo quae nobis soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente temporibus velit similique fuga, omnis, doloremque sint placeat ipsam autem maiores labore voluptatem itaque excepturi, voluptatibus tenetur in dicta non incidunt libero vero? Natus doloribus dolore voluptatem a commodi! Sequi, ipsum assumenda distinctio doloribus quia asperiores exercitationem quaerat et eaque qui nobis. Ab, cumque rerum ratione obcaecati nostrum earum officiis ullam illum dolor mollitia consectetur natus aliquam optio sint quis! Voluptatibus placeat mollitia dolor culpa perspiciatis, debitis facilis eaque possimus, expedita nisi iusto, enim officia cupiditate natus. Quo, modi minima.</div>
+    <div class="box">HEY I AM BOX
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aspernatur nihil magnam totam rerum dignissimos adipisci quis nemo nulla animi! Quisquam pariatur rerum blanditiis, ratione porro cupiditate excepturi, expedita illo ipsa dignissimos incidunt. Pariatur quidem molestiae animi accusamus dolorem officiis aspernatur non minus veritatis eum.
+    </div>
+    <div data-color="primary"   class="box">HEY I AM BOX Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aspernatur nihil magnam totam rerum dignissimos adipisci quis nemo nulla animi! Quisquam pariatur rerum blanditiis, ratione porro cupiditate excepturi, expedita illo ipsa dignissimos incidunt. Pariatur quidem molestiae animi accusamus dolorem officiis aspernatur non minus veritatis eum.</div>
+    <div class="box">HEY I AM BO Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aspernatur nihil magnam totam rerum dignissimos adipisci quis nemo nulla animi! Quisquam pariatur rerum blanditiis, ratione porro cupiditate excepturi, expedita illo ipsa dignissimos incidunt. Pariatur quidem molestiae animi accusamus dolorem officiis aspernatur non minus veritatis eum.</div>
+    <div class="box">HEY I AM BO Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aspernatur nihil magnam totam rerum dignissimos adipisci quis nemo nulla animi! Quisquam pariatur rerum blanditiis, ratione porro cupiditate excepturi, expedita illo ipsa dignissimos incidunt. Pariatur quidem molestiae animi accusamus dolorem officiis aspernatur non minus veritatis eum.X</div>
+    <br>
+    <input type="text" placeholder="enter your name here">
+    </div>
+    <div>
+        <pre>
+            <h1>
+                Selectors:
+        .box:first-child
+        .box:nth-child( even  or odd or we can give numbers)
+        .box:nth-child(5)
+        [data-color=primary] 
+        .box::first-line
+        .box::first-letter
+        .boxes::before
+        .boxes::after
+        ::selection
+        input::placeholder
+
+            </h1>
+        </pre>
+    </div>
+</body>
+</html>

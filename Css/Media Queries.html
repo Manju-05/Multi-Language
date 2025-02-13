@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries | CSS</title>
+
+<style>
+      /* @media not|only mediatype and (expression){
+        CSS Code
+        
+     } SYNTAX FOR MEDIA QUERY   */
+/* 
+    @media only screen and (max-width:800px) {
+        body {
+            background-color: coral;
+        } 
+    }*/
+
+    /* @media only screen and (orientation:portrait) {
+        .box1 {
+            width: 40vw;
+            height: 40vh;
+            background-color: #fff;
+        }
+    } */
+    @media only screen and (max-width:400px) {
+        .boxes{
+            background-color: #fff;
+            flex-wrap: wrap;
+        }
+    }
+
+    body {
+        background-color: lightblue;
+    }
+    .boxes{
+        display: flex;
+          }
+    .box1 {
+        border: 2px solid green;
+        background-color: #f1d6d6;
+        width: 20vw;
+        height: 30vh;
+        padding: 10px;
+        margin: 30px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor modi enim placeat, repudiandae esse quo maxime
+        sequi fuga nobis hic blanditiis est magni fugiat odit at! Beatae, praesentium eius vel, unde ullam non sapiente
+        quibusdam, a quod nulla explicabo provident voluptas dolor perspiciatis.
+    </div>
+    <div class="boxes">
+        <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sint ullam facilis reiciendis, ex, voluptate
+        quae rerum quisquam, distinctio accusantium voluptatem asperiores facere doloremque eos voluptatum 
+    </div>
+    <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sint ullam facilis reiciendis, ex, voluptate
+        quae rerum quisquam, distinctio accusantium voluptatem asperiores facere doloremque eos voluptatum 
+    </div>
+    <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sint ullam facilis reiciendis, ex, voluptate
+        quae rerum quisquam, distinctio accusantium voluptatem asperiores facere doloremque eos voluptatum 
+    </div>
+
+    </div>
+    
+</body>
+
+</html>

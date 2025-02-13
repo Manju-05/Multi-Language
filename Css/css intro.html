@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRO | CSS </title>
+    <!-- this is the link for the external css -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* HEY this is the Example for internal css */
+
+        /* div{
+            color:rgb(41, 223, 223);
+            background-color: rgb(9, 12, 5);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        span{
+            color:rgb(224, 17, 224);
+            background-color: rgb(226, 220, 213);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        p,h1{    // HERE WE CAN ADD MULTIPLE TAGS OR ELMENTS AT A ITME BY SEPARATING WITH COMMAS....
+            color:rgb(9, 87, 243);                        
+            background-color: rgb(220, 200, 220);
+
+        } */
+
+        /* ------------------------------------------*/
+        /* Here when use child selector we give > symbol on;ly the 1st p tag will be colored but hern we use the desendnt selectors  we  will give the space it will be colored to all the p tags in the div for ex: div  p  */
+
+        /* child selctor
+        only first child of the div will be colored as voilet.....  */
+        /* here we have to use the first child to give the different colors to the first child and the other color tot the remianing... */
+        div p:first-child {
+            color: red;
+            background-color: yellow;
+        }
+
+        /* descendent selector
+        ALL THE DIVS BG COLOR WILL BE BLUE... */
+
+        div p {
+            color:white;
+            background-color: rgb(24, 24, 255);
+        }
+
+        /* UNIVERSAL SELECTORS */
+        * {
+            margin: 20px;
+            padding: 10px;
+        }
+
+        /* pseuedo Selectors 
+        this is the selector that is used to add the css to the links  | anchor tags*/
+        a:visited {
+            color: red;
+        }
+         /* website that is not visted */
+        a:link {
+            color: green;
+        }
+       
+        a:active{  
+            background-color: violet;
+        }
+        a:hover{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- selectors -->
+    <p> SELECTORS ARE THE SELECTORS THAT ARE USED TO APPLY THE CSS FOR EX : DIV SPAN ARE THE SELECTORS </p>
+    <div>
+        Hey this is the introduction to CSS..! this is the div tag selector
+    </div>
+    <span>
+        Hey this is the another selector span this is intro to selectors....
+    </span>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quam odio quidem excepturi, iste porro eius odit
+        tempore alias facere vero vel aspernatur delectus, dolorum perferendis ut sit molestias culpa dicta officiis.
+    </p>
+    <h1>
+        Lorem ipsum dolor sit amet.
+    </h1>
+
+    <!-- placing / adding the CSS files -->
+    <p>Here we can Add the CSS to the html page in 3 ways i.e inline internal and external css </p>
+
+    <h5 style="color: brown; background-color: yellow;;">Hey ! this is the example of inline css</h5>
+
+    <div id="example">
+        Hey this is the example for the external css with the selector
+    </div>
+
+    <!-- SELECTORS | (class=.)   (id=#) -->
+
+    <!-- id selector -->
+    <div id="red">
+        Hey this is the example for the SELECTOR ID with the selector in the div
+    </div>
+    
+    <!-- class selector -->
+    <div class="yellow">
+        Hey this is the example for the SELECTOR class with the selector in the div
+    </div>
+    <!-- child  and descendent selectors -->
+    <div>
+        <p>hey iam the 1st child of the div tag in the para </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt optio, odit suscipit repellendus doloribus quos fugiat, corrupti et, facere ipsa quas fugit id velit laboriosam. Voluptatum odit eveniet hic porro.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatem optio provident impedit ducimus tempora vel assumenda. Assumenda aspernatur magni beatae porro facere distinctio eveniet temporibus corporis quia impedit. Possimus.</p>
+    </div>
+
+    <!--pseudo slectors -->
+    <div>
+        <a href="https://google.com">hey Google</a>
+        <a href="https://instagram.com">hey insta</a>
+        <a href="https://facebook.com" target="_blank">hey facebook</a>
+    </div>
+</body>
+</html>

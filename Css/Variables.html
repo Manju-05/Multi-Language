@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css | Variables</title>
+</head>
+<style>
+    
+     :root{                                                /*GLOBAL VARIABLE DECLARATION   */
+        --barcolor:rgba(125, 243, 247, 0.719);
+        --contcolor:rgba(253, 190, 199, 0.726);
+        --defpadd:23px;
+        --defopacity:0.5;
+    }
+    .bar ul {
+        display: flex;
+        list-style: none;
+        gap: 80px;
+        margin-left: 900px;
+        padding: var(--defpadd);
+      
+        
+        }
+    .bar{
+        background-color: lightgray;
+        background-color: var(--barcolor,red);
+        opacity:var(--defopacity) ;/* red is the optional color if lightgray is not suppprted then red will be applied.*/
+    }
+    .container{
+        background-color: rgb(191, 191, 250);
+        background-color: var(--contcolor,green);
+        font-weight: 400;
+    }
+    .container2{
+        --cont2color:rgba(137, 152, 244, 0.61);
+        background-color: var(--cont2color);
+        
+    }
+</style>
+
+<body>
+    <div class="bar">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, harum aspernatur. Non aliquam officiis fugit quo
+        dolores? Unde iusto ea quod eaque, quo voluptatibus exercitationem. Vitae nesciunt id blanditiis laudantium nisi
+        dolores, mollitia repellendus repellat explicabo fuga, harum sint debitis quia minima corrupti.
+    </div>
+    <div>
+        <pre>
+            <h1>
+               -> how to declare the variables in css?
+                To declare the variables in css        --root{
+                                                     navcolor:lightgray;
+                                                     contcolor:pink;
+                                                              }
+               -> we can use the variable value by using var() function
+                for ex: color:var(navcolor)
+               -> Variables are the values that hold some values it may be colors size and etc..
+            </h1>
+        </pre>
+    </div>
+    <div class="container2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veniam facere voluptatem neque vel perspiciatis repellat, reprehenderit voluptates consequuntur magni! Soluta sit cupiditate ducimus quae possimus id veniam magnam cum voluptates. Consequatur, dolores minima. </div>
+
+</body>
+
+</html>

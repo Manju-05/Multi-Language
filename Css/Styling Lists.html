@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists | CSS</title>
+    <style>
+        a:hover{
+            background-color:orange;
+        }
+        
+        nav ul li {
+            list-style-type: none;
+            /* list-style: decimal-leading-zero; */
+            /* list-style-type: "🚀"; */
+            /* list-style-image: url(images/list\ style\ image.png); */
+            /* background-color: aqua; */
+            /*  list-style-position: inside; */
+            border: 2px solid black;
+            padding: 20px;
+            padding-left: 150px;         /*NOTE : to give gap between the three li..*/
+           
+        }
+
+        nav ul {
+            display: flex;
+            padding-left: 635px;        /*NOTE : to move all the three li towards left.. */
+            
+        }
+        main{
+            height: 70vh;
+            border: 3px solid brown;
+            font-size:xx-large;
+        }
+        footer{
+            border: 2px solid blueviolet;
+            height: 12vh;
+            font-size:xx-large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            MAIN CONTENT
+        </div>
+    </main>
+    <footer>
+        <div>
+           FOOOTER......... &copy;copyrigths reserved..
+        </div>
+    </footer>
+
+</body>
+
+</html>

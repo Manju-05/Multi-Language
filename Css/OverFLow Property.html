@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OverFlow Property | CSS</title>
+    <style>
+        .chiti {
+            border: 2px solid maroon;
+            width: 10vw;
+            height: 20vh;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;    /*NOTE :  ALL THE CONTENT WILL BE DISPLAYED IN A SINGLE LINE*/
+            /* overflow: hidden; */ 
+        }
+        .robo{
+            border:2px solid green ;
+            width: 30vh;
+            height: 30vh;
+            overflow: scroll;
+            overflow: auto; /* if it extends more than the actual width or height automatically scrollbar apperas if no scrollbar disappears overflow: hidden; */
+            overflow-x: scroll;
+            overflow-y:scroll;
+            
+        }      
+    </style>
+</head>
+<body>
+    <div class="chiti">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates fugiat repellendus minima sint at unde eaque
+        explicabo qui voluptatibus? Voluptates excepturi delectus quae maiores laudantium? Consequuntur quae
+        dignissimos, officia tempore error ullam natus omnis nemo tempora. Placeat provident nesciunt mollitia
+        laudantium! Explicabo dicta saepe corporis.
+    </div>
+    <div class="robo">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est tenetur porro quae a velit. Enim, laborum aspernatur molestias cupiditate maiores minima. Quis a laborum esse iste possimus vitae, sit dolor non repudiandae molestias maxime eius nesciunt odio veritatis quibusdam provident. Eum architecto expedita at. ipsum dolor sit amet66 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil tenvoluptate. Architecto amet quia adipisci natus nesciunt nostrum tenetur, veritatis sunt exercitationem! Nihil aliquid doloribus reprehenderit. Impedit doloremque animi dolorem sint dolorum cum? Nisi, ipsam enim! Saepe porro at. 
+    </div>
+</body>
+</html>
