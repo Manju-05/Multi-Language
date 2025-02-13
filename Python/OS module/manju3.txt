@@ -1,0 +1,2 @@
+Hello welcome to the file operations 
+"This file should be kept outside of the folder "
