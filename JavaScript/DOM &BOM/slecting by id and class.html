@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 80vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boxes {
+            height: 30px;
+            width: 50px;
+            margin: 30px;
+            padding: 40px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="boxes">Box 1</div>
+        <div id="box" class="boxes">Box 2</div>
+        <div class="boxes">Box 3</div>
+        <div class="boxes">Box 4</div>
+        <div class="boxes">Box 5</div>
+    </div>
+
+    <pre>
+        <b>document.getElementsByClassName("class_name") :</b> used to <b>select the all the elements</b> (but not the particular element) that have the common class name.
+        <b>NOTE : Here we have to use the "s" becoz there can be more than one class.</b>
+        
+        <b>document.getElementById("#id_name") :</b>used to <b>select the only a particular element</b> (but not all the elements).
+        <b>used to target only a particular element only wether it can change their index or any changes may occur.But target will apply the CSS. </b>
+
+       <b>document.querySelector(".class_name")</b>: It only selects the first element that matches the class_name or the id_name. it wont apply the next classes or id's. 
+       <b>NOTE : HERE we use the "." to specify the class_name</b>
+       
+       <b>document.querySelectorAll(".class_name")</b>: It selects all the elements that matches the classname.
+       <b>NOTE : HERE we use the "." to specify the class_name.
+        ==> Here we cannot directly apply the css to the html elements but to apply the style to all the elements then we have to use the for each loop/any other loops
+       </b>
+
+    </pre>
+
+    <script src="Selcting by Id & classes.js"></script>
+</body>
+
+</html>

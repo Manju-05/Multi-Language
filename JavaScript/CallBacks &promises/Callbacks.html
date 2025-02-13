@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+      <b>  What  is a call back function is js?</b>
+         Callback is a function which is to be executed after another function has finished execution.Any function that is passed as an argument to another function so that it can be executed in that other function is called as a callback function. ...
+
+         let us consider a normal function if there are n number of functions then the function will executed in an order. These are the synchronous functions  that execute accoding to thier function calls()
+
+         But
+         
+         when we consider an asynchronous functions they will not execute in an order.
+         so inorder to execute the fucntions in an order we will use the callbackfunctions 
+         <h2></h2>
+    </pre>
+
+
+    <script>
+
+        // follwing is the difference betweeen the synchronous and the asynchronous functions
+
+        // function task1() {
+        //     console.log('task 1 is completed');
+        // }
+        // function task2(){
+        //     setTimeout(() => {
+        //         console.log('task 2 is completed')
+        //         }, 3000)
+        // }
+
+        // function task3() {
+        //     console.log('task 3 is completed');
+        // }
+        // function task4() {
+        //     console.log('task 4 is completed');
+        // }
+        // task1()
+        // task2()
+        // task3()
+        // task4()
+
+        // ASSUMPTION /EXPECTED OUTPUT :
+        //  task 1 is completed
+        //  task 2 is completed
+        //  task 3 is completed
+        //  task 4 is completed <===> BUT THIS IS THE WRONG OP
+
+
+        //  But Whenever we use the asynchronous functions 
+
+        function task1(callback) {
+            setTimeout(() => {
+                console.log('Task 1 completed');
+                callback()
+            }, 2000)
+        }
+
+        
+        function task2(callback) {
+            setTimeout(() => {
+                console.log('task 2 compelted')
+                callback()
+            }, 3000)
+        }
+        function task3(callback) {
+            setTimeout(() => {
+                console.log('task 3 compelted')
+                callback()
+            }, 1500)
+        }
+        function task4(callback) {
+            setTimeout(() => {
+                console.log('task 4 compelted')
+                callback()
+            }, 1000)
+        }
+        function task5(callback) {
+            setTimeout(() => {
+                console.log('ALL TASKS ARE COMPLETED')
+                callback()
+            }, 1000)
+        }
+        task1()
+        task2()
+        task3()
+        task4()
+
+        // this is called as ths callbackhell(PYRAMID DOM) to get the functions in an order
+        // task1(() => {
+        //     task2(() => {
+        //         task3(() => {                      
+        //             task4(() => {
+        //                 task5(() => {               
+        //                     console.log('THE End');
+        //                 })
+        //             })
+        //         })
+        //     })
+        // })
+
+        // The OP will be like this :
+        //  task 4 compelted
+        //  task 3 compelted
+        //  Task 1 completed 
+        //  task 2 compelted
+
+        // so inorder overcome this pblm and get the sequence of order of functions we will use the callback
+
+
+    </script>
+</body>
+
+</html>

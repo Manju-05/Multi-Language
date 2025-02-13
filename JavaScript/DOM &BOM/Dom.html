@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documnt object model</title>
+    <style>
+        ::selection{
+            color: aqua;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        hey I am a container
+    </div>
+    <h1>
+        What is DOM?<br><br>
+            D-entire document / webpage is the document <br>
+            O-objects in HTML elements as objects.
+             <br>MODEL<br><br>
+            
+            
+
+        The HTML DOM model is constructed as a tree of Objects: <br><br>
+        With the object model, JavaScript gets all the power it needs to create dynamic HTML 
+        dynamically access and update the content, structure, and style of a document.": <br><br>
+<li>JavaScript can change all the HTML elements in the page
+</li>
+<li>JavaScript can change all the CSS styles in the page
+</li>
+<li>JavaScript can change all the HTML attributes in the page
+</li>
+<li>JavaScript can remove existing HTML elements and attributes
+</li>
+<li>JavaScript can add new HTML elements and attributes</li>
+<li>
+    JavaScript can react to all existing HTML events in the page</li>
+<li>JavaScript can create new HTML events in the page
+</li>
+<li>window is the global object in the DOM .</li>
+
+<h2>WHAT IS BOM   <br>
+    BOM -browser 0object model <br>
+    responsible addtional objects provided by the browser execept the document <br>
+    for ex: prompt, confirm etc....
+</h2>
+
+
+
+<marquee  style="color: red; background-color: yellow;">
+    ONE OF THE MOST IMPORTANT TRICK
+</marquee>
+    </h1>
+    <h3>
+        if u want to make a dynamic changs on the website by inspecting the element  <br>
+        select the element in the console and the $==0 symbol will appear. <br>
+        then go to console and enter $0 the selected element wil be displays <br>if u want to make change then--!  $0.style.backgroundcolor ="red" --! SYNTAX
+
+    </h3>
+    <script>
+            document.title="TITLE OF THE PAGE" //changes the title of the web page
+            console.log(document.title); //displays the title in the console
+            console.log(document.body); //displays overall body of te htmnl structure in the console..
+            document.body.style.backgroundColor="lightblue"  //giving css through js ans it adds inline css to the tags
+    </script>
+</body>
+</html>
+
+
+

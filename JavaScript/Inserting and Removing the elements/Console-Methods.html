@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inseting and removing th elements</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" style="background-color: red;">Hey i am a box</div>
+        <div class="box1" hidden>Hey i am a hidden box</div>
+        <div class="box2" data-createdby="Manjunath" data-concept="ramu">Hey i am a not hidden box</div>
+        <!-- //here we used "data-createdby" this is a selctor or it is a data attribute it can be acesed by using "dataset" in js (it acts like an key pair values that is createdby is key and manjunath is value)
+
+            document.querySelector(".box2").dataset
+            DOMStringMap {createdby: 'Manjunath',concept: 'ramu}-->
+
+        <div class="box3">HEY THIS TEXT WILL BE REPLACED BY THE JS BY USING innerHTML</div>
+
+    </div>
+
+    <script>
+        document.querySelector(".container").innerHTML    //returns the inner html elements of the given element
+
+        // '\n        <div class="box">Hey i am a box</div>\n    '
+        document.querySelector(".box")
+
+        document.querySelector(".box").innerHTML   //return only the text of the given selector
+        'Hey i am a box'
+
+        document.querySelector(".box").innerText //return only the text of the given selector 
+        'Hey i am a box'
+
+
+        document.querySelector(".container").outerHTML       //retunrns the outer html elements and also itself
+
+        '<div class="container">\n        <div class="box">Hey i am a box</div>\n    </div>'
+
+        document.querySelector(".container").innerText    //returns the  all text elements of the given element
+
+        // '\n        <div class="box">Hey i am a box</div>\n/ / '\n        <div class="box">Hey i am a box</div>\n
+
+
+        document.querySelector(".container").textContent        //returns the overall text of the tag
+
+        '\n        Hey i am a box \n '
+
+        document.querySelector(".box").tagName
+        'DIV'
+
+        document.querySelector(".container").nodeName
+        'DIV'
+
+        document.querySelector(".box3").innerHTML = "hey this is the text that is replaced by js"
+
+        document.querySelector(".box2").hasAttribute("style")  //if the selected id has the specific attribute then it reutrn true else it reutrns false
+
+        document.querySelector(".box").getAttribute("style") //it return the style of the element
+        'background-color: red;'
+        
+
+        document.querySelector(".box").setAttribute("style", "display:flex") //it sets the specific style to the given element
+        undefined
+
+        document.querySelector(".box").removeAttribute("style", "display:flex")  //here it removes the specific style from the element
+        undefined
+
+
+        document.querySelector(".box").attributes  //it displays all the attributes of the specific element
+
+        // NamedNodeMap {0: class, class: class, length: 1}
+
+
+    </script>
+</body>
+
+</html>

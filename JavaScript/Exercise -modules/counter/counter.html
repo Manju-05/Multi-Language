@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        .container {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+        }
+
+        #countlabel {
+            text-align: center;
+        }
+
+        .btns {
+            width: 90px;
+            height: 50px;
+            color: whitesmoke;
+            background-color: slategrey;
+            cursor: pointer;
+            font-size: large;
+            border-radius: 5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .btns:hover {
+            background-color: rgb(35, 48, 59);
+        }
+
+        .btns:active {
+            background-color: rgb(135, 167, 190);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>counter with increasing decreasing and reset button</h1>
+
+    <h1 id="countlabel">0</h1>
+    <div class="container">
+        <button class="btns" id="dec">Decrease</button>
+        <button class="btns" id="reset">Reset</button>
+        <button class="btns" id="inc">Increase</button>
+    </div>
+    <script src="counter.js"></script>
+</body>
+
+</html>

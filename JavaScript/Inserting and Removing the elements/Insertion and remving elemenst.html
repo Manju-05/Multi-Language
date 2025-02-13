@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion and reomving of elements</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="steps">
+        <pre>
+            1.create a div / any element by assinging it to a varible
+            2.give a clas name to the div / any element
+            3.write any content in the div  / any element
+            4.atlast append the div to the conatiner or any othe places u want
+        </pre>
+    </div>
+    <div class="container">
+        <hr>
+        <div class="box1">Box1</div>
+
+        <div class="box2">Box2</div>
+        <div class="box3 blue red bg-color">this is used for class name and class list</div>
+        <hr>
+    </div>
+    <script>
+
+        // method 1 to create a div and append it to the container uisng js
+
+        let div = document.createElement("div"); //div is created
+        div.setAttribute("class", "box3");  //assiging the class name to the div
+
+        document.querySelector(".container").append(div) //appending the div to the container
+
+        /* 
+
+        document.querySelector(".container").prepend(div) 
+        // prepend() is the function that adds the element before the first the div in the container
+
+        document.querySelector(".container").before(div) 
+        // before() is the function that adds the element before  the container
+
+        document.querySelector(".container").after(div) 
+        // after() is the function that adds the element after the container 
+
+        document.querySelector(".container").replaceWith(div) 
+        // replaceWith() is the function that replace  the element with the container 
+
+        //these are the additional functoins that are ued to append the div to the container
+
+        */
+
+        div.innerHTML = " hello i am created by using append method <br>here <i>html</i> tags also work<b>I an div</b>";
+         //writing the content in the div.This data will be added to the end of the container.
+
+
+
+        /*
+ 
+        //method 2 : to create a div and append it to the container
+ 
+         let div2=document.createElement("div"); // div is created 
+         div2.className="box4";  // class name is given to div
+         document.querySelector(".container").append(div2)  //appending the div to the container
+         div2.innerHTML="hello welocme to th js tutorial<br><b>this is the method 2 to add the div to the container</b>" //writing the content in the div 
+         
+         */
+
+        //  inserting adjacentHTML
+
+        let msg = document.querySelector(".container")
+        msg.insertAdjacentHTML("afterend", "hey this is the html text that is inserted by using the insertAdjacentHTML function() <u> afterend </u><b>'therfore this text is added at the end of the html tag(container)' </b> ")
+
+        msg.insertAdjacentHTML("beforebegin", "hey this is the html text that is inserted by using the insertAdjacentHTML function() <u> beforebegin </u><b>'therfore this text is added at the beggining of t he html tag(container)'</b>  ")
+
+        msg.insertAdjacentHTML("afterbegin", "hey this is the html text that is inserted by using the insertAdjacentHTML function() <u>afterbegin</u> <b>'therfore this text is added after the begginng  of the html tag(container)' </b> ")
+
+        //likethis only we can add the text by using the insertAdjacentText() 
+        //likethis only we can add the elements by using the insertAdjacentElement() 
+
+        // node.remove() --> is used to remove the elements
+
+        document.querySelector(".box2").remove() //removes the box2 form the container
+
+        // class-name and classlist
+
+        document.querySelector(".box3").classList //all the list of classNames are returned.
+
+        // DOMTokenList(3) ['box3', 'blue', 'bg-color', value: 'box3 blue bg-color']
+
+        document.querySelector(".box3").classList.add("green") //we can dynamically add the classes by using add function
+
+        document.querySelector(".box3").classList.remove("green") //we can dynamically remove the classes by using remove function
+
+        document.querySelector(".box3").className  //retruns only the class names 
+        // 'box3 blue bg-color'
+
+        document.querySelector(".box3").classList.toggle("red") //toggle mode is used to to toggles the css
+
+        // toggle- if it is on / true = o/p - of
+        //         if it is off / false = o/p - on
+    </script>
+</body>
+
+</html>

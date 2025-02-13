@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children & siblings & Parents</title>
+</head>
+
+<style>
+    .container {
+        height: 50vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boxes {
+        height: 25px;
+        width: 55px;
+        border: 2px solid red;
+        margin: 20px;
+        padding: 30px;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <!-- hi this is a commment -->
+        <div class="boxes">Box 1</div>
+        <div class="boxes">BOX 2</div>
+        <div class="boxes">BOX 3</div>
+        <div class="boxes">BOX 4</div>
+        <div class="boxes">BOX 5</div>
+        
+    </div>
+
+    <pre>
+        console.log(body.childNodes)
+
+        document.body.childNodes[0]
+
+        document.body.childNodes[1].firstElementChild 
+
+        let cont =document.body.childNodes[1] --defining the variable to the container
+
+        cont.childnodes -----returns all of the textnodes comments elements.
+
+        cont.children    --- gives only the child of HTML elements but not the text nodes / spaces
+
+        cont.firstChild -----returns  the first element with specifying the textnode.
+
+        cont.firstElementChild -----returns directly the first html element without specifying the textnode.
+
+        cont.lastElementChild -----returns the last html element
+
+        cont.nextSibling   ---returns next text/comments /elements
+        
+        cont.nextElementSibling --returns the next html element 
+
+        cont.previousSibling
+
+        cont.previousElementSibling -----returns directly siblings 
+        wether text nodes / comments are present also  
+
+        cont.firstElementChild.style.color="red" --apply css 
+        document.body.childNodes[1].parentElement
+
+        cont.parentNode
+
+        cont.parentElement 
+    </pre>
+
+    <script>
+        console.log("hello world");
+
+        console.log(document.title);
+        
+        console.log(document.body)
+
+
+     // perform all the below commands on the browser console....!
+
+        // console.log(body.childNodes) ---   gives all the child nodes of the body and also with the text nodes --> NodeList(5) [text, div.container, text, script, text] 
+
+        //document.body.childNodes[0]   --    gives child nodes of the body t the index = 1---->#text
+
+        //        document.body.childNodes[1].childNodes ---> gives all the child nodes of the element at the index = 1; or we can assign variable to the element and we can acess it .
+        // o/p=
+        // NodeList(11) [text,  comment, div.boxes, text, div.boxes, text, div.boxes, text, div.boxes, text, div.boxes, text]
+
+        //let cont =document.body.childNodes[1] --defining the variable 
+        // undefined
+        // cont
+        // <div class=​"container">
+
+
+        //document.body.childNodes[1].children    --- gives only the child elements but not the text nodes /spaces
+        // HTMLCollection(5) [div.boxes, div.boxes, div.boxes, div.boxes, div.boxes]
+
+        //document.body.childNodes[1].firstElementChild  -- gives only the child elements but not the text 
+        // <div class=​"boxes">​Box 1​</div>
+        
+//         let cont=document.body.childNodes[1]
+//         
+//         cont
+//        <div class=​"container">​…​</div>​
+
+//        cont.firstElementChild
+//        <div class=​"boxes">​Box 1​</div>​
+//        cont.lastElementChild
+//        <div class=​"boxes">​BOX 5​</div>​
+
+//         cont.nextSibling
+//        #text​
+
+//         cont.previousSibling ----returns text and neext sibling and al;os comments
+//         #text
+
+//        cont.previousElementSibling -----returns directly siblings wether text nodes / comments are present also  
+//         null
+
+// cont.firstElementChild.style.color="red"
+//  'red'
+
+// cont.firstElementChild.style.backgroundColor="yellow"
+// 'yellow'
+
+// document.body.childNodes[1].parentElement
+// <body>​…​</body>​
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    background-color: rgb(5, 77, 5);
+    color: whitesmoke;
+    font-size: larger;
+}
+.blinking{
+    font-size: larger;
+    transform: translateX(10px);
+}

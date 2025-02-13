@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        <h3>To get rid of the callback functions and the callback hell we have to use the promises concept
+      Syntax : return new promise(resolve,rejected)
+        </h3>
+        <b>Promsie:</b> An object that manages the asynchronous operations
+                ~  this wraps the asynchronous code 
+                ~ "promise will return a value "
+                ~  the value may be "pending" "resloved" or "rejected"
+
+                ~ if the promise is get true then it is executed / resolved 
+                ~ if the promise is get false then it is not executed / an error      
+                occured
+                ~ if the task 1 is failes to execute then the task2 and task 3 wont be executed 
+                ~ catch() is the method that is used to catch and handle the errors 
+    </pre>
+    <script>
+        // function task1(callback){
+        //     setTimeout(()=>{
+        //         console.log('task 1 is completed');  
+        //         callback()
+        //     },1200)
+        //     }
+
+        // function task2(callback){
+        //     setTimeout(()=>{
+        //         console.log('task 2 is completed'); 
+        //         callback() 
+        //     },1000)
+        // }
+
+        // function task3(callback){
+        //     setTimeout(()=>{
+        //         console.log('task 3 is completed');  
+        //         callback()
+        //     },1500)
+        // }
+// callback functions and callbackhell
+        // task1(()=>{   
+        //     task2(()=>{
+        //         task3(()=>console.log('All TASKS are completed'))
+        //     })
+        // })
+       
+// Promises:
+
+   function task1(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+        const task1=true
+        if(task1)
+            resolve('task 1 is completed ✅');  
+            else{
+                reject("task is not completed ❌")
+            }
+        },900)
+    })
+   }
+   function task2(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+        const task2=true
+        if(task2){
+            resolve('taks 2 is completed ✅');  
+        }
+        else{
+            reject("task 2 is not completed ❌" )
+        }
+        }, 2000);
+    })
+   }
+
+   function task3(){
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            const task3=false
+            if(task3){
+                resolve('task 3 is completed ✅');
+            }
+            else{
+                reject("task3 is not completed ❌")
+            }
+            
+        },1800)
+    })
+   }
+   task1().then(value => {console.log(value);return task2() })
+          .then(value => {console.log(value);return task3() })
+          .then(value => {console.log(value);console.log('All tasks are completed');
+        })
+          .catch(error => console.error(error));
+    </script>
+</body>
+</html>
